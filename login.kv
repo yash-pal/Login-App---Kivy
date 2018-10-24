@@ -1,0 +1,53 @@
+#:include connected.kv
+
+<Login>:
+    BoxLayout
+        id: login_layout
+        orientation: 'vertical'
+        padding: [10,50,10,50]
+        spacing: 50
+
+
+        Label:
+            text:'CREATEOBOT'
+            font_size: 32
+
+
+        BoxLayout:
+            orientation: 'vertical'
+
+
+            Label:
+                text: 'Login'
+                font_size: 18
+                halign: 'left'
+                text_size: root.width-20, 20
+
+            TextInput:
+                id: login
+                mutliline: False
+                font_size: 28
+
+
+
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text: 'Password'
+                halign: 'left'
+                font_size: 18
+                text_size: root.width-20, 20
+
+
+
+            TextInput:
+                id: 'Password'
+                halign: 'left'
+                font_size: 28
+
+        Button:
+            text: 'LOGIN'
+            font_size: 24
+
+
+            on_press: root.do.login(login.text, password.text)
